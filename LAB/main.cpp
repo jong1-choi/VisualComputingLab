@@ -104,7 +104,7 @@ vec3 toVec3( const std::vector<double>& v ) {
 
 hittable_list random_scene() {
     hittable_list world;
-    igl::readOBJ("/Users/choijongwon/Downloads/lowpolydeer/deer.obj", V, TC, N, F, FTC, FN);
+    igl::readOBJ("/Users/choijongwon/Desktop/LAB/model/deer.obj", V, TC, N, F, FTC, FN);
     
     double tempVertex[3];
     point3 triangleVertex[3];
@@ -245,8 +245,8 @@ int main() {
     const int height_interval = (image_height+thread_number-1)/thread_number;
 //    const int samples_per_pixel = 100;
 //    const int max_depth = 30;
-    const int samples_per_pixel = 100;
-    const int max_depth = 30;
+    const int samples_per_pixel = 30;
+    const int max_depth = 10;
     
     uint8_t* data = new uint8_t[WIDTH * HEIGHT * CHANNEL];
     
